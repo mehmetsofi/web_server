@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<style>
+    body {
+  background: url('http://dmdatasecurity.com/wp-content/uploads/2013/06/bsb.png');
+  padding:2%;
+ overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  background: #00f;
+  position:fixed;
+}
+
+marquee {
+
+}
+
+.header marquee:nth-child(1) {
+  float:left;
+  position:absolute;
+}
+.header marquee:nth-child(2) {
+  float:right;
+  position:relative;
+}
+
+.menu {
+  background: url('https://i.pinimg.com/236x/c7/bf/d3/c7bfd37631392e06de71632171e3deff--ridiculous-pictures-backstreet-boys.jpg');
+  width:280px;
+  height:280px;
+  border: 2px solid #f0f;
+  position:absolute;
+  top: 200px;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  text-align: center;
+  border:2px solid;
+}
+
+.menu ul li:hover {
+  background:#00f;
+}
+.menu ul li a {
+  color: yellow;
+}
+
+.content {
+  margin: 0 auto ;
+  height: 1500px;
+  width:600px;
+  background: #f08;
+}
+
+.member {
+  float:left;
+  display: block;
+}
+  </style>
+		<head>
+      <script>
+          var trailLength = 25 // The length of trail (8 by default; put more for longer "tail")
+          var path = "https://2.bp.blogspot.com/_63jNTgpdEHY/SOMIRcNfVUI/AAAAAAAAAuo/76R1MiN2S14/s400/tiny+heart.gif" // URL of your image
+
+          var standardbody=(document.compatMode=="CSS1Compat")? document.documentElement : document.body //create reference to common "body" across doctypes
+          var i,d = 0
+
+          function initTrail() { // prepares the script
+            images = new Array() // prepare the image array
+            for (i = 0; i < parseInt(trailLength); i++) {
+              images[i] = new Image()
+              images[i].src = path
+            }
+            storage = new Array() // prepare the storage for the coordinates
+            for (i = 0; i < images.length*3; i++) {
+              storage[i] = 0
+            }
+            for (i = 0; i < images.length; i++) { // make divs for IE and layers for Navigator
+              document.write('<div id="obj' + i + '" style="position: absolute; z-Index: 100; height: 0; width: 0"><img src="' + images[i].src + '"></div>')
+            }
+            trail()
+          }
+          function trail() { // trailing function
+            for (i = 0; i < images.length; i++) { // for every div/layer
+              document.getElementById("obj" + i).style.top = storage[d]+'px' // the Y-coordinate
+              document.getElementById("obj" + i).style.left = + storage[d+1]+'px' // the X-coordinate
+              d = d+2
+            }
+            for (i = storage.length; i >= 2; i--) { // save the coordinate for the div/layer that's behind
+              storage[i] = storage[i-2]
+            }
+            d = 0 // reset for future use
+            var timer = setTimeout("trail()",10) // call recursively
+          }
+          function processEvent(e) { // catches and processes the mousemove event
+            if (window.event) { // for IE
+              storage[0] = window.event.y+standardbody.scrollTop+10
+              storage[1] = window.event.x+standardbody.scrollLeft+10
+            } else {
+              storage[0] = e.pageY+12
+              storage[1] = e.pageX+12
+            }
+          }
+
+            initTrail()
+            document.onmousemove = processEvent // start capturing
+        </script>
+			<title>I Love Backstreet Boys</title>
+		</head>
+    <body>
+		<!--<body><embed height="45" width="45" src="http://dmdatasecurity.com/bsb.ogg"> --><div class="header" style="float: left;"> -->
+		<marquee width="50%">
+			<center>
+				<h1>BaCkStReEt BoYs!!! BaCkStReEt BoYs!!! BaCkStReEt BoYs!!!</h1>
+			</center>
+		</marquee>
+		<marquee width="50%" direction="right">
+			<center>
+				<h1>BaCkStReEt BoYs!!! BaCkStReEt BoYs!!! BaCkStReEt BoYs!!!</h1>
+			</center>
+		</marquee>
+	</div>
+	<br />
+	<br />
+	<br />
+	<br />
+	<div >
+		<center>
+			<img src="https://24.media.tumblr.com/tumblr_l2zmrsbhc81qb2y5yo1_500.jpg" alt="BSB
+				<3" />
+			</center>
+		</div>
+		<div class="menu">
+			<ul>
+				<li>
+					<a href="#brian">Brian Littrell</a>
+				</li>
+				<li>
+					<a href="#aj">A. J. McLean</a>
+				</li>
+				<li>
+					<a href="#howie">Howie Dorough</a>
+				</li>
+				<li>
+					<a href="#nick">Nick Carte</a>r
+				</li>
+				<li>
+					<a href="#kevin">Kevin Richardson</a>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div id="brian" class="member">
+				<img style="float: left;" src="http://images4.fanpop.com/image/photos/14900000/brian-3-3-3-3-3-the-backstreet-boys-14900434-391-500.jpg" width="150" alt="dreamy" />
+				<h2>OMG!!!  BRIAN IS SO DREAMY!</h2>
+				<br />
+        ======================================
+				<br />
+        Brian Thomas Littrell is an American singer-songwriter and occasional actor, best known as a member of the Backstreet Boys(duh!). He is also a contemporary Christian recording artist and released a solo album, Welcome Home, in 2006.
+				<i>(Wikipedia)</i>
+			</div>
+			<hr />
+			<div id="aj" class="member">
+				<img src="https://i.pinimg.com/originals/c3/90/92/c3909203fe69cc545b86fd0c9684d978.jpg" alt="badboy" width="150" style="float: left" />
+				<h2>AJ is such a badboy.  I could get into trouble all day with AJ! </h2>
+				<br />
+        =================================================
+				<br />
+        Alexander James "A.J." McLean is an American musician, singer, dancer, actor, and entertainer. He is a member of the Backstreet Boys.
+				<i>Wikipedia</i>
+			</div>
+			<hr />
+			<div id="howie" class="member">
+				<img src="https://akns-images.eonline.com/eol_images/Entire_Site/2017712/rs_634x1024-170812132309-634.bsb111.cm.81217.jpg" alt="badboy" width="150" style="float: left" />
+				<h2>I do not like Howie! EWWWWW, SUCH A SNOB! (but he is in BSB)</h2>
+				<br />
+        ------------------------------------------------------------
+				<br />
+        Howard Dwaine "Howie D." Dorough is an American singer-songwriter, dancer, musician, entertainer, actor, and businessman. He is best known as a member of American music group Backstreet Boys.
+				<i>Wikipedia</i>
+			</div>
+			<hr />
+			<div id="nick" class="member">
+				<img src="http://www.gstatic.com/tv/thumb/persons/170634/170634_v9_ba.jpg" alt="badboy" width="150" style="float: left" />
+				<h2>NICK IS SUCH A BABY FACE!!!  I COULD JUST PINCH HIS CHEEKS ALL DAY! ^_^</h2>
+				<br />
+        ------------------------------------------------------------
+				<br />
+        Nickolas Gene "Nick" Carter is an American singer-songwriter, dancer, musician, entertainer and actor. He is best known as a member of the pop group Backstreet Boys.
+				<i>Wikipedia</i>
+			</div>
+			<hr />
+			<div id="kevin" class="member">
+				<img src="http://www.nndb.com/people/981/000109654/kevin-richardson.jpg" alt="badboy" width="150" style="float: left" />
+				<h2>Kevin is so mysterious!  I could look into his deep eye all day long on my wall poster above my bed!</h2>
+				<br />
+        ------------------------------------------------------------
+				<br />
+        Kevin Scott Richardson is an American singer, model, actor, composer, best known as a founding member of the Backstreet Boys.
+				<i>Wikipedia</i>
+			</div>
+			<img style="height:260px;margin: 0 auto" src="https://bucket.mn2s.com/wp-content/uploads/2018/10/13144327/backstreet-boys-title-pic.jpg" alt="bsbsbsbsbsb" />
+		</div>
+	</body>
+</html>
